@@ -1,9 +1,9 @@
 :root {
     --clr-navbar: #FFFFFF;
+    --clr-content: #1B5F77;
+    --clr-content-button: #0B9FA3;
+    --font-regular: 'Open Sans', sans-serif;
 }
-/* * {
-    border: 2px solid red;
-} */
 body {
     background-image: url('background.jpg');
     margin: 0;
@@ -14,15 +14,19 @@ nav, .logo, nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-family: var(--font-regular);
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 nav ul a {
-    text-decoration: none !important;
+    text-decoration: none;
     list-style: none;
-    color: var(--clr-navbar)
+    color: var(--clr-navbar);
 }
 nav ul a:hover {
     text-decoration: underline;
-    /* add more styling to hover underline */
+    text-decoration-thickness: 5px;
+    text-decoration-color: var(--clr-content-button);
 }
 nav {
     justify-content: space-around;
@@ -46,6 +50,9 @@ nav .navbar {
 .socials {
     gap: 20px;
 }
+.socials a {
+    text-decoration: none !important;
+}
 .socials a .border {
     flex-basis: content;
     display: flex;
@@ -55,4 +62,89 @@ nav .navbar {
     width: 2.5em;
     border: 2px solid var(--clr-navbar);
     border-radius: 50%; 
+}
+
+/* content */
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 100px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-family: var(--font-regular);
+}
+.content h2, .content p {
+    color: var(--clr-content);
+    margin: 0;
+    font-weight: bold;
+}
+.content h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.content p {
+    font-size: 1em;
+}
+.content button {
+    background-color: var(--clr-content-button);
+    color: var(--clr-navbar);
+    border: none;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: .8em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 150px;
+}
+.carousel {
+    flex: 2;
+}
+.carousel ul {
+    display: flex;
+    gap: 20px;
+}
+.carousel ul li {
+    position: relative;
+    top: -100px;
+    list-style: none;
+}
+.carousel ul li img {
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+.carousel ul li span {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 20px;
+    text-transform: uppercase;
+    color: var(--clr-navbar);
+    font-family: var(--font-regular);
+    font-weight: 800;
+    font-size: 2rem;
+}
+.dot-background {
+    background-image: radial-gradient(rgb(255, 255, 255) 26.4%, transparent 38%);
+    background-position: 5px 5px;
+    background-size: 10px 10px;
+    background-color: transparent;
+    height: 175px;
+    width: 175px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    position: relative;
+    top: 50px;
+}
+.carousel button {
+    position: relative;
+    top: -100px;
 }
