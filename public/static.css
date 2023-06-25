@@ -1,0 +1,58 @@
+:root {
+    --clr-navbar: #FFFFFF;
+}
+/* * {
+    border: 2px solid red;
+} */
+body {
+    background-image: url('background.jpg');
+    margin: 0;
+    padding: 50px 100px; 
+    background-size: cover;
+}
+nav, .logo, nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav ul a {
+    text-decoration: none !important;
+    list-style: none;
+    color: var(--clr-navbar)
+}
+nav ul a:hover {
+    text-decoration: underline;
+    /* add more styling to hover underline */
+}
+nav {
+    justify-content: space-around;
+    color: var(--clr-navbar);
+}
+.logo {
+    align-items: center;
+    gap: 10px;
+    flex-grow: 0.5;
+}
+
+/* navbar */
+nav .navbar {
+    gap: 50px;
+}
+/* search icon */
+.search {
+    padding: 0 0 0 50px;
+}
+/* social media icons */
+.socials {
+    gap: 20px;
+}
+.socials a .border {
+    flex-basis: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    width: 2.5em;
+    border: 2px solid var(--clr-navbar);
+    border-radius: 50%; 
+}
